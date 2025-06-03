@@ -1,0 +1,52 @@
+# .NET build artifacts
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# VS Code settings
+.vscode/
+
+# Build results
+*.exe
+*.dll
+*.app
+*.log
+
+# NuGet packages
+*.nupkg
+packages/
+.nuget/
+
+# Installer outputs
+*.msi
+*.wixpdb
+*.wixobj
+*.wixproj.user
+
+# Others
+*.dbmdl
+*.pdb
+*.cache
+*.zip
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# MacOS
+.DS_Store
+
+# Windows image file caches
+*.jfif
+
+# Rider
+.idea/
+*.sln.iml

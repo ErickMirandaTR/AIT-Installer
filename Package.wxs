@@ -1,0 +1,65 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs" xmlns:util="http://wixtoolset.org/schemas/v4/wxs/util">
+  <?define CompanyName="Thomson Reuters" ?>
+  <?ifndef $(env.EnvironmentName) ?>
+    <?define ProductName="AIT Add-in" ?>
+  <?else?>
+    <?define ProductName="AIT Add-in $(env.EnvironmentName)" ?>
+  <?endif?>
+  <?ifndef $(env.EnvironmentName) ?>
+    <?define ManifestFileName="TR.Prod.SmartSample.ExcelAddinManifest.xml" ?>
+  <?else?>
+    <?define ManifestFileName="TR.$(env.EnvironmentName).SmartSample.ExcelAddinManifest.xml" ?>
+  <?endif?>
+
+  <Package Id="AIT.Addin" Name="$(ProductName)" ProductCode="7B6E1FA8-2CD9-49E1-AB0C-35440DEFE599" Manufacturer="$(CompanyName)" Version="1.0.0.0">
+    <Media Id="1" Cabinet="no" EmbedCab="yes" />
+    <Property Id="ARPPRODUCTICON" Value="AIT.Ico" />
+    <Icon Id="AIT.Ico" SourceFile="AIT.Ico" />
+
+    <Directory Id="InstallFolder" Name="$(ProductName)">
+      <Component Id="ManifestFolder" Guid="43A9F9BA-CCFA-44FF-9CB9-D722370838E3">
+        <File Id="ManifestFile" Source="$(ManifestFileName)" />
+        <!-- <util:User Id="Everyone" Name="Everyone" CreateUser="no" FailIfExists="no" RemoveOnUninstall="no" />
+        <util:FileShare Id="SharedFolder" Description="Shared folder" Name="$(ProductName)">
+          <util:FileSharePermission User="Everyone" Read="yes" GenericRead="yes" Synchronize="yes" />
+        </util:FileShare> -->
+      </Component>
+    </Directory>
+
+    <Component Id="RegistryEntries" Guid="447368FD-9571-4CAF-904C-D016F797A890">
+      <!-- <RegistryKey Root="HKCU" Key="Software\Microsoft\Office\16.0\WEF\TrustedCatalogs\{447368FD-9571-4CAF-904C-D016F797A890}">
+        <RegistryValue Name="Id" Type="string" Value="{447368FD-9571-4CAF-904C-D016F797A890}" />
+        <RegistryValue Name="Url" Type="string" Value="\\[ComputerName]\$(ProductName)" />
+        <RegistryValue Name="Flags" Type="integer" Value="1" />
+      </RegistryKey> -->
+      <RegistryKey Root="HKCU" Key="Software\Microsoft\Office\16.0\WEF\Developer">
+        <RegistryValue Name="[InstallFolder]$(ManifestFileName)" Type="string" Value="[InstallFolder]$(ManifestFileName)" />
+      </RegistryKey>
+    </Component>
+
+    <Feature Id="MainFeature" Title="Main Feature" Level="1">
+      <ComponentRef Id="ManifestFolder" />
+      <ComponentRef Id="RegistryEntries" />
+    </Feature>
+    
+  </Package>
+</Wix>
+<!-- 
+  Build commands (Remove space between contigous hyphens):
+
+  >> $env:EnvironmentName = "CI"  
+  >> dotnet build -p:TargetName="AIT CI installer" - -no-incremental
+
+  >> $env:EnvironmentName = "Demo"
+  >> dotnet build -p:TargetName="AIT Demo installer" - -no-incremental
+
+  >> $env:EnvironmentName = "Qed"  
+  >> dotnet build -p:TargetName="AIT Qed installer" - -no-incremental
+
+  >> $env:EnvironmentName = "Prod"  
+  >> dotnet build -p:TargetName="AIT installer" - -no-incremental
+  or
+  >> Remove-Item Env:EnvironmentName
+  >> Remove-Item Env:TargetName
+  >> dotnet build - -no-incremental
+  -->
