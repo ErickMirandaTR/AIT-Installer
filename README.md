@@ -9,7 +9,7 @@ To create your first installation package with the WiX Toolset, you only need a 
 
 ## Build Commands
 
-Set the environment and build for each configuration. 
+Set the environment and build for each configuration. Run commands in PowerShell.
 
 ### CI Environment
 
@@ -43,6 +43,5 @@ Or to build with default settings:
 
 ```powershell
 Remove-Item Env:EnvironmentName
-Remove-Item Env:TargetName
 dotnet build --no-incremental
 ```
