@@ -44,22 +44,3 @@
     
   </Package>
 </Wix>
-<!-- 
-  Build commands (Remove space between contigous hyphens):
-
-  >> $env:EnvironmentName = "CI"  
-  >> dotnet build -p:TargetName="AIT CI installer" - -no-incremental
-
-  >> $env:EnvironmentName = "Demo"
-  >> dotnet build -p:TargetName="AIT Demo installer" - -no-incremental
-
-  >> $env:EnvironmentName = "Qed"  
-  >> dotnet build -p:TargetName="AIT Qed installer" - -no-incremental
-
-  >> $env:EnvironmentName = "Prod"  
-  >> dotnet build -p:TargetName="AIT installer" - -no-incremental
-  or
-  >> Remove-Item Env:EnvironmentName
-  >> Remove-Item Env:TargetName
-  >> dotnet build - -no-incremental
-  -->
