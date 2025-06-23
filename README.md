@@ -34,12 +34,7 @@ dotnet build -p:TargetName="AIT Qed installer" --no-incremental
 
 ### Prod Environment
 
-```powershell
-$env:EnvironmentName = "Prod"
-dotnet build -p:TargetName="AIT installer" --no-incremental
-```
-
-Or to build with default settings:
+Build with default settings:
 
 ```powershell
 Remove-Item Env:EnvironmentName

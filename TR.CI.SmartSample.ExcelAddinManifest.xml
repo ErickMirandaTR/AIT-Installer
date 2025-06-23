@@ -17,8 +17,8 @@
 	<ProviderName>Thomson Reuters</ProviderName>
 	<DefaultLocale>en-US</DefaultLocale>
 	<!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
-	<DisplayName DefaultValue="AI Test CI" />
-	<Description DefaultValue="AI-Test add-in streamlines audits by matching and documenting samples with supporting evidence. Save time and enhance confidence in testing results for a more efficient audit process."/>
+	<DisplayName DefaultValue="Audit Intelligence Test CI" />
+	<Description DefaultValue="Audit Intelligence Test add-in streamlines audits by matching and documenting samples with supporting evidence. Save time and enhance confidence in testing results for a more efficient audit process."/>
 	<!-- Icon for your add-in. Used on installation screens and the add-ins dialog. -->
 	<IconUrl DefaultValue="https://ci.officeaddin.aitest.thomsonreuters.com/Images/TestAITIcon32X32.png" />
 
@@ -130,14 +130,14 @@
 			</bt:Urls>
 			<!-- ShortStrings max characters==125. -->
 			<bt:ShortStrings>
-				<bt:String id="AIT.TaskpaneButton.Label" DefaultValue="AI Test add-in CI" />
+				<bt:String id="AIT.TaskpaneButton.Label" DefaultValue="Audit Intelligence Test CI" />
 				<bt:String id="AIT.Group1Label" DefaultValue=" " />
-				<bt:String id="AIT.GetStarted.Title" DefaultValue="Get started with AI Test add-in CI!" />
+				<bt:String id="AIT.GetStarted.Title" DefaultValue="Get started with Audit Intelligence Test CI!" />
 			</bt:ShortStrings>
 			<!-- LongStrings max characters==250. -->
 			<bt:LongStrings>
-				<bt:String id="AIT.TaskpaneButton.Tooltip" DefaultValue="Click to Show a Taskpane" />
-				<bt:String id="AIT.GetStarted.Description" DefaultValue="AI Test add-in CI loaded succesfully. Go to the HOME tab and click the 'AI Test add-in' button to get started." />
+				<bt:String id="AIT.TaskpaneButton.Tooltip" DefaultValue="Click to launch add-in" />
+				<bt:String id="AIT.GetStarted.Description" DefaultValue="Audit Intelligence Test CI add-in loaded succesfully. Go to the HOME tab and click the 'Audit Intelligence Test' button to get started." />
 			</bt:LongStrings>
 		</Resources>
 	</VersionOverrides>

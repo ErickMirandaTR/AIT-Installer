@@ -17,8 +17,8 @@
 	<ProviderName>Thomson Reuters</ProviderName>
 	<DefaultLocale>en-US</DefaultLocale>
 	<!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
-	<DisplayName DefaultValue="AI Test QED" />
-	<Description DefaultValue="AI-Test add-in streamlines audits by matching and documenting samples with supporting evidence. Save time and enhance confidence in testing results for a more efficient audit process. - QED environment"/>
+	<DisplayName DefaultValue="Audit Intelligence Test QED" />
+	<Description DefaultValue="Audit Intelligence Test add-in streamlines audits by matching and documenting samples with supporting evidence. Save time and enhance confidence in testing results for a more efficient audit process. - QED environment"/>
 	<!-- Icon for your add-in. Used on installation screens and the add-ins dialog. -->
 	<IconUrl DefaultValue="https://qed.officeaddin.aitest.thomsonreuters.com/Images/TestAITIcon32X32.png" />
 
@@ -130,14 +130,14 @@
 			</bt:Urls>
 			<!-- ShortStrings max characters==125. -->
 			<bt:ShortStrings>
-				<bt:String id="AIT.TaskpaneButton.Label" DefaultValue="AI Test add-in QED" />
+				<bt:String id="AIT.TaskpaneButton.Label" DefaultValue="Audit Intelligence Test QED" />
 				<bt:String id="AIT.Group1Label" DefaultValue=" " />
-				<bt:String id="AIT.GetStarted.Title" DefaultValue="Get started with AI Test add-in QED!" />
+				<bt:String id="AIT.GetStarted.Title" DefaultValue="Get started with Audit Intelligence Test QED!" />
 			</bt:ShortStrings>
 			<!-- LongStrings max characters==250. -->
 			<bt:LongStrings>
-				<bt:String id="AIT.TaskpaneButton.Tooltip" DefaultValue="Click to Show a Taskpane" />
-				<bt:String id="AIT.GetStarted.Description" DefaultValue="AI Test add-in QED loaded succesfully. Go to the HOME tab and click the 'AI Test add-in' button to get started." />
+				<bt:String id="AIT.TaskpaneButton.Tooltip" DefaultValue="Click to launch add-in" />
+				<bt:String id="AIT.GetStarted.Description" DefaultValue="Audit Intelligence Test QED add-in loaded succesfully. Go to the HOME tab and click the 'Audit Intelligence Test' button to get started." />
 			</bt:LongStrings>
 		</Resources>
 	</VersionOverrides>
